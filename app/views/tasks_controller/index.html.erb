@@ -1,0 +1,16 @@
+<h1>TasksController#index</h1>
+<p>Find me in app/views/tasks_controller/index.html.erb</p>
+
+<ul>
+  <% @tasks.each do |x| %>
+    <li>
+      <!-- <a href="tasks/<%=x.id%>"><%= x.title %></a> -->
+      <%= link_to(x.title, task_path(x) ) %>
+      <%= link_to "delete", task_path(x), method: :delete%>
+    </li>
+  <%end%>
+</ul>
+
+<%= link_to "create a new task", "tasks/new" %>
+
+

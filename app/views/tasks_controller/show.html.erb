@@ -1,0 +1,9 @@
+<h1>TasksController#show</h1>
+<p>Find me in app/views/tasks_controller/show.html.erb</p>
+
+<h1><%=@task.title%></h1>
+<h3><%=@task.details%></h3>
+<h3><%=@task.completed%></h3>
+
+<!-- <a href="<%=@task.id%>/edit">Edit</a> -->
+<%= link_to("Edit", edit_task_path(@task)) %>
